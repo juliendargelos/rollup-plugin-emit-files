@@ -5,4 +5,4 @@ declare const _default: ({ src, dest, include, exclude }: {
     include?: string | string[] | undefined;
     exclude?: string | string[] | undefined;
 }) => Plugin;
-export default _default;
+export { _default as default };

@@ -10,7 +10,7 @@ export default ({
   exclude = []
 }: {
   src: string
-  dest?: string,
+  dest?: string
   include?: string | string[]
   exclude?: string | string[]
 }): Plugin => {
@@ -25,7 +25,7 @@ export default ({
       await Promise.all(files.map(file => (async () => this.emitFile({
         type: 'asset',
         fileName: path.join(dest, file),
-        source: await fs.readFile(path.join(src, file))
+        source: (await fs.readFile(path.join(src, file))).toString()
       }))()))
     }
   }
