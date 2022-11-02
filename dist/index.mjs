@@ -17,4 +17,4 @@ var index = ({ src, dest = '.', include = '**/*', exclude = [] }) => {
     };
 };
 
-export default index;
+export { index as default };
